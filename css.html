@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sq" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Dizajni i Website-it</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="bg-animation" class="bg-animation"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-code"></i> WebEdu
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Kreu</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html" class="active">CSS</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="playground.html">Playground</a>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tutorial-section fade-in">
+            <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+                <div style="background: rgba(21, 114, 182, 0.1); width: 80px; height: 80px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem;">
+                    <i class="fa-brands fa-css3-alt" style="font-size: 3.5rem; color: #1572B6;"></i>
+                </div>
+                <div>
+                    <h1 style="margin-bottom: 0.5rem; color: #1572B6;">Çfarë është CSS?</h1>
+                    <p style="margin: 0; font-size: 1.2rem; color: var(--secondary-accent);">Gjuha që i jep stil dhe bukuri Web-it</p>
+                </div>
+            </div>
+            
+            <div style="background: var(--card-bg); padding: 1.5rem; border-left: 4px solid #1572B6; border-radius: 0 8px 8px 0; margin-bottom: 2rem;">
+                <p style="font-size: 1.15rem; margin-bottom: 0;"><strong>CSS</strong> (Cascading Style Sheets) është gjuha që përdoret për t'i dhënë dizajn, ngjyra dhe strukturë vizuale një dokumenti HTML. Nëse HTML është "skeleti" dhe muret e një ndërtese, CSS është bojat, dekorimet e brendshme, dritat dhe arredimi.</p>
+            </div>
+            
+            <p style="font-size: 1.1rem;">Me CSS, ju keni mundësinë të kontrolloni plotësisht ngjyrat, madhësinë e shkrimit, pozicionin e elementeve në ekran, hijet (shadows), dhe madje edhe animacionet komplekse.</p>
+        </section>
+
+        <section class="tutorial-section fade-in">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;"><i class="fa-solid fa-palette" style="color: var(--secondary-accent);"></i> Karakteristikat Bazë të CSS</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Këto janë tre konceptet kryesore që formojnë bazën e çdo stilimi në CSS:</p>
+
+            <div class="card-grid">
+                <!-- Colors -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent);">
+                    <h3><i class="fa-solid fa-droplet" style="color: var(--secondary-accent); margin-right: 10px;"></i> Sfondi dhe Ngjyrat</h3>
+                    <p>Mund të ndryshoni ngjyrën e tekstit ose të shtoni ngjyra e imazhe në sfondin (background) e elementeve tuaja.</p>
+                    <div class="code-block">
+<span style="color: #5c6370; font-style: italic;">/* Ky është një koment në CSS */</span>
+<span style="color: #e06c75;">h1</span> {
+  <span style="color: #56b6c2;">color</span>: <span style="color: #d19a66;">blue</span>;
+  <span style="color: #56b6c2;">background-color</span>: <span style="color: #d19a66;">lightgray</span>;
+}
+                    </div>
+                </div>
+
+                <!-- Fonts -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent);">
+                    <h3><i class="fa-solid fa-font" style="color: var(--secondary-accent); margin-right: 10px;"></i> Fontet (Shkrimi)</h3>
+                    <p>Mund të zgjidhni familjen e shkrimit (psh. Arial, Times New Roman), madhësinë dhe trashësinë (bold, italic).</p>
+                    <div class="code-block">
+<span style="color: #e06c75;">p</span> {
+  <span style="color: #56b6c2;">font-family</span>: Arial, sans-serif;
+  <span style="color: #56b6c2;">font-size</span>: <span style="color: #d19a66;">16px</span>;
+  <span style="color: #56b6c2;">font-weight</span>: <span style="color: #d19a66;">bold</span>;
+}
+                    </div>
+                </div>
+
+                <!-- Layout -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent);">
+                    <h3><i class="fa-solid fa-object-group" style="color: var(--secondary-accent); margin-right: 10px;"></i> Struktura e Kutive</h3>
+                    <p>Çdo element HTML është një "kuti". Përdorni <code>margin</code> për hapësirën e jashtme dhe <code>padding</code> për atë të brendshme.</p>
+                    <div class="code-block">
+<span style="color: #e5c07b;">.kutia</span> {
+  <span style="color: #56b6c2;">margin</span>: <span style="color: #d19a66;">20px</span>;
+  <span style="color: #56b6c2;">padding</span>: <span style="color: #d19a66;">15px</span>;
+  <span style="color: #56b6c2;">border</span>: <span style="color: #d19a66;">1px solid black</span>;
+}
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p>Shihni si i jep CSS jetë HTML-së në Playground!</p>
+                <a href="playground.html" class="btn btn-primary">Shko tek Playground <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WebEdu - CSS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

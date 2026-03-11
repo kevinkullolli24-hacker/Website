@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sq" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground & Quiz</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="bg-animation" class="bg-animation"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-code"></i> WebEdu
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Kreu</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="playground.html" class="active">Playground</a>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div style="text-align: center; margin-bottom: 2rem;" class="fade-in">
+            <h1 style="font-size: 2.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-laptop-code" style="color: var(--secondary-accent); margin-right: 15px;"></i> Kodimi në Praktikë</h1>
+            <p style="font-size: 1.2rem; color: var(--text-color); opacity: 0.9;">Shkruani kodin tuaj HTML dhe CSS në kutinë e majtë, shtypni "Run Code" dhe shikoni rezultatin live në të djathtë.</p>
+        </div>
+
+        <!-- Playground Editor -->
+        <section class="playground-container fade-in">
+            
+            <div class="playground-editor">
+                <div class="playground-header">
+                    <span style="font-weight: 600;"><i class="fa-solid fa-laptop-code"></i> Editori yt</span>
+                    <button class="btn btn-primary" id="run-code" style="padding: 0.5rem 1rem;">Run Code <i class="fa-solid fa-play"></i></button>
+                </div>
+                <textarea id="html-code" spellcheck="false">
+<!-- Fshije këtë dhe provo vetë! -->
+<h1 style="color: blue;">Përshëndetje Botë!</h1>
+<p style="font-size: 18px;">Ky është i gjithi kodi im i parë i dizajnuar me pak CSS.</p>
+
+<button style="background: green; color: white; padding: 10px; border-radius: 5px; border: none;">Kliko Këtu</button>
+                </textarea>
+            </div>
+
+            <div class="playground-preview">
+                <div class="playground-header">
+                    <span style="color: var(--text-color); font-weight: 600;"><i class="fa-solid fa-eye"></i> Rezultati</span>
+                </div>
+                <iframe id="preview-frame" title="Live Preview"></iframe>
+            </div>
+
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section fade-in">
+            <h2 style="text-align: center; margin-bottom: 2rem;"><i class="fa-solid fa-question-circle" style="color: var(--secondary-accent);"></i> Kuiz: Testo Njohuritë</h2>
+
+            <div class="quiz-question">
+                <h3>1. Cila gjuhë përdoret për strukturën e një faqeje web?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">A) CSS</div>
+                    <div class="quiz-option" data-correct="false">B) JavaScript</div>
+                    <div class="quiz-option" data-correct="true">C) HTML</div>
+                    <div class="quiz-option" data-correct="false">D) Python</div>
+                </div>
+                <div class="quiz-feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. Çfarë bën CSS në një website?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">A) Përcakton dizajnin, ngjyrat dhe hapësirat</div>
+                    <div class="quiz-option" data-correct="false">B) E bën faqen të lidhet me databazën</div>
+                    <div class="quiz-option" data-correct="false">C) Krijon strukturën bazë</div>
+                    <div class="quiz-option" data-correct="false">D) Nuk është e rëndësishme</div>
+                </div>
+                <div class="quiz-feedback"></div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. Cila etiketë përdoret për të shfaqur një imazh në HTML?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">A) &lt;picture&gt;</div>
+                    <div class="quiz-option" data-correct="false">B) &lt;src&gt;</div>
+                    <div class="quiz-option" data-correct="false">C) &lt;image&gt;</div>
+                    <div class="quiz-option" data-correct="true">D) &lt;img&gt;</div>
+                </div>
+                <div class="quiz-feedback"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="check-answers" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Shiko Përgjigjet</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WebEdu - Playground & Quiz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

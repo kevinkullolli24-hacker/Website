@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sq" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mësojmë si të ndërtojmë një website</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div id="bg-animation" class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-code"></i> WebEdu
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" class="active">Kreu</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="playground.html">Playground</a>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Mësojmë si të ndërtojmë një <span style="color: var(--secondary-accent)">Website</span></h1>
+            <p style="font-size: 1.3rem; line-height: 1.8; color: var(--text-color); opacity: 0.9;">Një platformë interaktive dhe moderne e ndërtuar për fillestarët. Zbuloni botën e zhvillimit web duke mësuar teknologjitë thelbësore të internetit në gjuhën shqipe.</p>
+            <div class="hero-buttons">
+                <a href="html.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Fillo Tani <i class="fa-solid fa-rocket" style="margin-left: 8px;"></i></a>
+                <a href="playground.html" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem;">Provo Kodin <i class="fa-solid fa-terminal" style="margin-left: 8px;"></i></a>
+            </div>
+            
+            <div class="hero-illustration">
+                <div class="floating-icon" style="animation-delay: 0s;">
+                    <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+                </div>
+                <div class="floating-icon" style="animation-delay: 2s; margin: 0 40px; transform: scale(1.2);">
+                    <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+                </div>
+                <div class="floating-icon" style="animation-delay: 1s;">
+                    <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="tutorial-section fade-in" style="margin-top: 4rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; color: var(--secondary-accent);"><i class="fa-solid fa-globe"></i> Çfarë është një website?</h2>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-color); opacity: 0.9;">Një website është një koleksion faqesh interneti të lidhura me njëra-tjetrën, të cilat mund të hapen përmes një shfletuesi (si Chrome, Safari, ose Firefox). Websitet përdoren për të shpërndarë informacion, për të shitur produkte, për të komunikuar, ose thjesht për t'u argëtuar.</p>
+            </div>
+            
+            <div style="background: var(--card-hover); padding: 2rem; border-radius: 12px; margin-bottom: 3rem; text-align: center; border: 1px solid var(--secondary-accent);">
+                <p style="font-size: 1.2rem; margin: 0;">Për të ndërtuar një website nga e para, ju duhen <strong>3 teknologji bazë</strong> të cilat punojnë gjithmonë së bashku:</p>
+            </div>
+            
+            <div class="card-grid">
+                <!-- HTML Card -->
+                <div class="card" style="text-align: center;">
+                    <div style="background: rgba(227, 79, 38, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-brands fa-html5 card-icon" style="color: #E34F26; margin: 0;"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <h4 style="color: var(--secondary-accent); font-weight: 600; margin-bottom: 1rem;">Struktura (Skeleti)</h4>
+                    <p style="flex-grow: 1;">HTML përdoret për të krijuar "skeletin" e një website-i. Ajo përcakton ku do të vendosen tekstet, imazhet dhe lidhjet (links) në faqe.</p>
+                    <a href="html.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Mëso HTML <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+                </div>
+
+                <!-- CSS Card -->
+                <div class="card" style="text-align: center;">
+                    <div style="background: rgba(21, 114, 182, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-brands fa-css3-alt card-icon" style="color: #1572B6; margin: 0;"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <h4 style="color: var(--secondary-accent); font-weight: 600; margin-bottom: 1rem;">Dizajni (Pamja)</h4>
+                    <p style="flex-grow: 1;">CSS përdoret për t'i dhënë jetë dhe ngjyra website-it tuaj. Ajo kontrollon ngjyrat, fontet, dhe pozicionimin e saktë të elementeve.</p>
+                    <a href="css.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Mëso CSS <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+                </div>
+
+                <!-- JS Card -->
+                <div class="card" style="text-align: center;">
+                    <div style="background: rgba(247, 223, 30, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-brands fa-js card-icon" style="color: #F7DF1E; margin: 0;"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <h4 style="color: var(--secondary-accent); font-weight: 600; margin-bottom: 1rem;">Interaktiviteti (Truri)</h4>
+                    <p style="flex-grow: 1;">JavaScript i jep jetë website-it tuaj, duke mundësuar animacione, butona funksionalë, dhe ndryshime të të dhënave pa rifreskuar faqen.</p>
+                    <a href="javascript.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">Mëso JS <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WebEdu - Mësojmë si të ndërtojmë një website. Krijuar për edukim.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

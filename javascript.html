@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sq" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Truri i Website-it</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="bg-animation" class="bg-animation"></div>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-code"></i> WebEdu
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Kreu</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html" class="active">JavaScript</a>
+            <a href="playground.html">Playground</a>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tutorial-section fade-in">
+            <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+                <div style="background: rgba(247, 223, 30, 0.1); width: 80px; height: 80px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem;">
+                    <i class="fa-brands fa-js" style="font-size: 3.5rem; color: #F7DF1E;"></i>
+                </div>
+                <div>
+                    <h1 style="margin-bottom: 0.5rem; color: #F7DF1E;">Çfarë është JavaScript?</h1>
+                    <p style="margin: 0; font-size: 1.2rem; color: var(--secondary-accent);">Truri dhe Interaktiviteti i Web-it</p>
+                </div>
+            </div>
+            
+            <div style="background: var(--card-bg); padding: 1.5rem; border-left: 4px solid #F7DF1E; border-radius: 0 8px 8px 0; margin-bottom: 2rem;">
+                <p style="font-size: 1.15rem; margin-bottom: 0;"><strong>JavaScript</strong> është gjuha e programimit e cila i jep jetë faqeve në web. Nëse HTML është skeleti dhe CSS është pamja e jashtme, JavaScript është sistemi nervor, energjia elektrike dhe uji – ai e bën ndërtesën të funksionojë vërtet!</p>
+            </div>
+            
+            <p style="font-size: 1.1rem;">Në thelb, JavaScript u lejon website-ve të reagojnë ndaj veprimeve të përdoruesit, të dërgojnë e të marrin të dhëna në prapaskenë, dhe të krijojnë ndërfaqe komplekse e ndërvepruese pa pasur nevojë të ngarkoni përsëri faqen (refresh).</p>
+        </section>
+
+        <section class="tutorial-section fade-in">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;"><i class="fa-solid fa-bolt" style="color: var(--secondary-accent);"></i> Pse na duhet JavaScript?</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Këto janë disa nga funksionet kryesore që bëjnë JavaScript një nga gjuhët më të rëndësishme sot:</p>
+
+            <div class="card-grid">
+                <!-- Interactivity -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent); text-align: center;">
+                    <i class="fa-solid fa-hand-pointer" style="font-size: 2.5rem; color: var(--secondary-accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Interaktivitet</h3>
+                    <p style="margin: 0;">Mundëson dritaret e vogla ("pop-up"), klikimin e butonave (si për shembull butoni jonë për ndryshimin e modalitetit Dritë/Errësirë) dhe menutë lëvizëse.</p>
+                </div>
+
+                <!-- Animations -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent); text-align: center;">
+                    <i class="fa-solid fa-film" style="font-size: 2.5rem; color: var(--secondary-accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Animacione Komplekse</h3>
+                    <p style="margin: 0;">Ndërsa CSS mund të krijojë animacione bazë, JavaScript përdoret për ndryshime dinamike me llogaritje apo krijimin e lojërave vizuale direkt në browser.</p>
+                </div>
+
+                <!-- Data Loading -->
+                <div class="card" style="border-top: 4px solid var(--secondary-accent); text-align: center;">
+                    <i class="fa-solid fa-server" style="font-size: 2.5rem; color: var(--secondary-accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 1rem;">Përditësimi i të Dhënave</h3>
+                    <p style="margin: 0;">Ju lejon të komunikoni me databaza dhe të merrni të dhëna nga jashtë (si p.sh. parashikimi i motit) duke i shfaqur ato menjëherë te përdoruesi.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-code" style="color: var(--secondary-accent); margin-right: 10px;"></i> Një Shembull i Thjeshtë në JavaScript</h3>
+                <div class="code-block" style="font-size: 1.1rem;">
+<span style="color: #5c6370; font-style: italic;">// Ky kod gjen një buton në faqe dhe kur klikohet, tregon një mesazh.</span>
+<span style="color: #c678dd;">let</span> butoni <span style="color: #56b6c2;">=</span> <span style="color: #e5c07b;">document</span>.<span style="color: #61afef;">getElementById</span>(<span style="color: #98c379;">"butoni-im"</span>);
+
+butoni.<span style="color: #61afef;">addEventListener</span>(<span style="color: #98c379;">"click"</span>, <span style="color: #c678dd;">function</span>() {
+    <span style="color: #61afef;">alert</span>(<span style="color: #98c379;">"Ju sapo klikuat butonin me sukses!"</span>);
+});
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p>Jeni gati të sfidoni njohuritë tuaja?</p>
+                <a href="playground.html" class="btn btn-primary">Shko tek Playground dhe Quiz <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WebEdu - JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
